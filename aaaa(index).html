@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="assets/JQ/jquery.js"></script>
+    <script src="assets/js/oci.js"></script>
+    <link rel="stylesheet" href="assets/css/oci.css">
+    <link rel="stylesheet" href="assets/FA/css/all.css">
+    <!-- <script src="assets/FA/js/all.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div id="mySidenav-home" class="sidenav-home bs--1">
+      <div class="pt-1 bs-1">
+        <marquee direction="up" class="fc-white">
+          <span style="display: block; padding-right:5px;background-image: linear-gradient(to right top, #2adc32, #1de04e, #11e466, #0ae87a, #12eb8d);color:transparent;" >----</span> 
+        </marquee>
+      </div>
+      <br>
+        <div class="puso">
+            <a href="javascript:void(0)" class="closebtn ml--1" onclick="closeNav()"> &times;</a>
+            <img src="assets/img/1.png" alt="logo" class="img-fluid">
+          <form action="#">
+            <div class="form-group">
+              <label for="uname" class='fc-white GP18'>Nama </label>
+              <input type="text" name='nama' id='uname' class='form-control' required autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="upass" class="fc-white GP18">Password</label>
+            
+              <input  type="password" name='pass' id='upass' class='form-control' required autocomplete="off">
+            </div>
+            <input type="checkbox" class="form-checkbox "> <span class="fc-white">Show Password</span>
+            <br>
+            <button type='submit' class="btn-block btn-success  border-r1">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="mySidenav-home2" class="sidenav-home bs--1">
+            <div class="puso">
+                <a href="javascript:void(0)" class="closebtn ml--1" onclick="closeNav2()"> &times;</a>
+                <h1 class="fc-white">Lupa Password</h1>
+                <span class="fc-white">isilah kolom dibawah ini dengan benar</span>
+                <hr class="hr--1">
+              <form action="#">
+                <div class="form-group">
+                  <label for="uname" class='fc-white GP18'>Nama </label>
+                  <input type="text" name='nama' id='uname' class='form-control' required autocomplete="off" placeholder="Masukan Nama...">
+                </div>
+                <br>
+                <div class="form-group" >
+                  <select name='pOne' class="form-control">
+                    <option value=" Kamu suka apa?">Kamu suka apa?</option>
+                    <option value=" Kamu benci aoa?">Kamu benci aoa?</option>
+                    <option value=" Cita-cita kamu!"> Cita-cita kamu!</option>
+                  </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input  type="password" name='jOne' id='jOne' class='form-control' required autocomplete="off" placeholder="Jawaban...">
+                </div>
+                <hr class="hr--1">
+                <div class="form-group">
+                  <label for="upass" class="fc-white GP18">Masukan Password Baru</label>
+                
+                  <input  type="password" name='pass' id='upass' class='form-control' required autocomplete="off">
+                </div>
+                <input type="checkbox" class="form-checkbox "> <span class="fc-white">Show Password</span>
+                <br>
+                <button type='submit' class="btn-block btn-success  border-r1">Submit</button>
+              </form>
+            </div>
+          </div>
+      
+      <div id="main-home" >
+   <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <div class="puso">
+
+      <div id="logo" class="pull-left">
+        <!-- <a href="#hero"><img src="\.png" alt="" title="" /></img></a> -->
+        <!-- PILIHAN-->
+        <h1><a href="index.html" style="text-decoration: none; cursor:none;"><i class="GP6">marrochi</i></a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active bs-1" style="padding-top: 5px;"><a href="#"><i class="fas fa-user-astronaut fa-3x" onclick="openNav()"></i> </a></li>
+          <li><a href="#" class="bs-1" style="padding-top: 5px;"><i class="fas fa-user-times fa-3x" onclick="openNav2()"></i></a></li>
+          <li><a href="https://www.youtube.com/?hl=id&gl=ID" class="bs-1" style="padding-top: 5px;" target="_blank"><i class="fab fa-youtube fa-3x"></i></i></a></li>
+          <li><a href="https://web.facebook.com/" class="bs-1" style="padding-top: 5px;" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+          <!-- <li><a href="#team"></a></li> -->
+          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a href="#contact">Contact Us</a></li> -->
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1 class="GP16">Warung Laris </h1>
+      <h2 class="GP18">semoga hari ini banyak yang beli </h2>
+      <a href="#about" class="btn-get-started GP16" >Get Started</a>
+<div class="dn1">
+    <div class="alert2 GP25" style="letter-spacing: 1.4px"><marquee>Password yg anda masukan salah</marquee></div>
+    <!-- <div class="alert2 GP25" style="letter-spacing: 1.4px"><marquee>Password yg anda masukan kurang dari 3 angka</marquee></div>
+    <div class="alert2 GP25" style="letter-spacing: 1.4px"><marquee>Ganti password gagal</marquee></div>
+    <div class="alert2 GP25" style="letter-spacing: 1.4px"><marquee>Ganti password Berhasil</marquee></div> -->
+</div>
+    </div>
+  </section><!-- #hero -->
+
+
+
+      </div>
+      
+ 
+</body>
+</html>
