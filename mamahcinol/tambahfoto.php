@@ -49,29 +49,7 @@ if(!isset($_SESSION['nama-user'])){
     .navbar-user    .active {
         background-image: linear-gradient(to right top, #ef45ff, #ff009e, #ff6e3c, #ffb800, #a8eb12);
     }
-    /* dropdown navbar*/
-    .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ccc;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    
      /* form search */
   .box-search1{
   margin: 0% auto;
@@ -163,87 +141,46 @@ if(!isset($_SESSION['nama-user'])){
   border-collapse: collapse;
   border-right: 2px solid #fff;
 }
-* {
-  box-sizing: border-box;
-}
-
-
-.colom3 {
-  float: left;
-  width: 32.33%;
-  padding: 10px;
-  margin-right:1%;
-  height:auto; 
-}
-
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
     </style>
 </head>
 <body>
 <ul class='navbar-user'>
   <div class="puso">
-  <li><a class=" GP4 active" href="index.php"><big><i class="fab fa-phoenix-squadron"></i> Home</big> </a></li>
-  <li><a class='GP4 ' href="databarang.php"><big><i class="fas fa-store"></i> DataBarang</big></a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn"><i class="fab fa-airbnb"></i> Master Data</a>
-    <div class="dropdown-content">
-      <a href="suply.php">Suply</a>
-      <a href="tambahstock.php">Tambah Stock</a>
-      <a href="kalkulator.php">Kalkulator</a>
-      <a href="tambahfoto.php">Tambah Foto</a>
- 
-    </div>
-  </li>
-  <li><a class=" GP4" href="gantipas.php"><big><i class="fas fa-lock"></i> Ganti Password</big> </a></li>
-  <li><a href="about.php"><big><i class="fas  fa-1x">?</i></big></a></li>
-  <li class='float-r'><a class='GP4' href="pro/pro-logout.php"><big><i class="fas fa-sign-out-alt"></i> Logout</big></a></li>
+  <li><a class=" GP4" href="databarang.php"><big><i class="fas fa-angle-double-left"></i> Kembali</big> </a></li>
+
   </div>
 </ul>
 <br>
 <div class="puso">
- <h1>Dashboard</h1>
+ <h1>Perbarui Foto Barang</h1>
  <hr>
-
+</div>
 <div class="puso">
-<div class="row">
-  <div class="colom3" style="background-color:rgba(0,0,0,0.7);border-radius:0.25rem;color:white;">
-    <h2>Pendapatan Tahun Ini</h2>
-    <?php 
-     $dateTime1 =   date('Y-');
-    $tahun = mysqli_query($connect,"SELECT sum(tl_bt) as total FROM tbl_barangterjual WHERE tgl_bt LIKE '%$dateTime1%' ");
-    $rstahun = mysqli_fetch_array($tahun);
-    ?>
-    <p>Rp.<?php echo number_format($rstahun['total']) ?></p>
-    <a href="tahun.php" class="btn btn-success">Lihat Selengkapnya</a>
-  </div>
-  <div class="colom3" style="background-color:rgba(0,0,0,0.7);border-radius:0.25rem;color:white;">
-  <h2>Pendapatan Bulan Ini</h2>
-  <?php 
-     $dateTime1 =   date('Y-m');
-    $bulan = mysqli_query($connect,"SELECT sum(tl_bt) as total FROM tbl_barangterjual WHERE tgl_bt LIKE '%$dateTime1%' ");
-    $rsbulan = mysqli_fetch_array($bulan);
-    ?>
-   <p>Rp.<?php echo number_format($rsbulan['total']) ?></p>
-   <a href="bulan.php" class="btn btn-success">Lihat Selengkapnya</a>
-
-  </div>
-  <div class="colom3" style="background-color:rgba(0,0,0,0.7);border-radius:0.25rem;color:white;">
-    <h2>Pendapatan Hari Ini</h2>
-    <?php 
-     $dateTime1 =   date('Y-m-d');
-    $hari = mysqli_query($connect,"SELECT sum(tl_bt) as total FROM tbl_barangterjual WHERE tgl_bt LIKE '%$dateTime1%' ");
-    $rshari = mysqli_fetch_array($hari);
-    ?>
-    <p>Rp.<?php echo number_format($rshari['total']) ?></p>
-    <a href="hari.php" class="btn btn-success">Lihat Selengkapnya</a>
-  </div>
-</div></div>
+<?php 
+        
+        if(isset($_GET['err'])){
+            if($_GET['err']=='1'){
+                echo "<a href='' class='btn btn-danger float-r'>Nama Barang Salah</a>"; 
+          }
+          else if($_GET['err']=='2'){
+               echo "<a href='' class='btn btn-success float-r'>Berhasil Ditambah</a>"; 
+          }
+        
+        }
+           
+?>
+</div>
+<div class="puso">
+    <form action="tambahfotoA.php" method='post' enctype="multipart/form-data">
+    <span>Nama Barang : </span> <input type="text" name='nb'  class='form-control' required> <br>
+    <span>Foto :</span> <input type="file" name='foto' class="form-control" required>
+    <br>
+    <span>Keterangan Foto : </span> <textarea name="kf" class="form-control" ></textarea>
+    <br>
+    <button type='submit' class='btn btn-success'>Simpan</button> <button type='reset' class='btn btn-danger'>Reset</button>
+    </form>    
 
 </div>
+
 </body>
 </html>

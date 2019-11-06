@@ -175,13 +175,13 @@ if(!isset($_SESSION['nama-user'])){
     <div class="dropdown-content">
       <a href="suply.php">Suply</a>
       <a href="tambahstock.php">Tambah Stock</a>
-      <a href="kalkulator.php" target='_blank'>Kalkulator</a>
- 
+      <a href="kalkulator.php" >Kalkulator</a>
+      <a href="tambahfoto.php" >Tambah Foto</a>
     </div>
   </li>
   <li><a class=" GP4" href="gantipas.php"><big><i class="fas fa-lock"></i> Ganti Password</big> </a></li>
-  <li><a href="https://www.youtube.com/?hl=id&gl=ID" target="_blank"><big><i class="fab fa-youtube "></i></i></big></a></li>
-          <li><a href="https://web.facebook.com/" target="_blank"><big><i class="fab fa-facebook-square"></i></a></big></li>
+  <li><a href="about.php"><big><i class="fas  fa-1x">?</i></big></a></li>
+        
   <li class='float-r'><a class='GP4' href="pro/pro-logout.php"><big><i class="fas fa-sign-out-alt"></i> Logout</big></a></li>
   </div>
 </ul>

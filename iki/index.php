@@ -9,6 +9,7 @@
     <script src="../assets/js/oci.js"></script>
     <link rel="stylesheet" href="../assets/css/oci.css">
     <link rel="stylesheet" href="../assets/FA/css/all.css">
+    <link rel="stylesheet" href="../lightbox/dist/css/lightbox.css">
     <!-- <script src="../assets/FA/js/all.js"></script> -->
     <title>index</title>
 <style>
@@ -214,6 +215,7 @@ if(isset($_GET['cari'])){
        <thead>
        <tr>
             <th>No</th>
+            <th>Foto</th>
             <th>Nama Barang</th>
             <th>Harga Jual</th>
             <th>Stock</th>
@@ -228,6 +230,7 @@ if(isset($_GET['cari'])){
                       ?>
                 <tr>
                   <td><?php echo $no++ ?></td>
+                  <td><a href="../mamahcinol/foto/<?php echo $rsdb1['foto'] ?>" data-lightbox="roadtrip" data-title="<?php echo $rsdb1['keterangan_foto']?>"><img src="../mamahcinol/foto/<?php echo $rsdb1['foto'] ?>" alt="" width='30' height='30'></a></td>
                   <td><?php echo $rsdb1['nama_barang'] ?></td>
                   <td>RP.<?php echo number_format($rsdb1['harga_jual']) ?></td>
                   <td><?php echo $rsdb1['jumlah'] ?></td>
@@ -259,6 +262,7 @@ if(isset($_GET['cari'])){
 </div>
 
 </div>
+<script src="../lightbox/dist/js/lightbox-plus-jquery.js"></script>
 </body>
 </html>
 
