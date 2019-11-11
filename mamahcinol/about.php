@@ -72,31 +72,22 @@ background: -webkit-linear-gradient(left, rgba(182,236,226,1) 0%, rgba(114,238,2
 background: -o-linear-gradient(left, rgba(182,236,226,1) 0%, rgba(114,238,213,1) 50%, rgba(36,224,180,1) 51%, rgba(182,236,226,1) 100%);
 background: -ms-linear-gradient(left, rgba(182,236,226,1) 0%, rgba(114,238,213,1) 50%, rgba(36,224,180,1) 51%, rgba(182,236,226,1) 100%);
 background: linear-gradient(to right, rgba(182,236,226,1) 0%, rgba(114,238,213,1) 50%, rgba(36,224,180,1) 51%, rgba(182,236,226,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6ece2', endColorstr='#b6ece2', GradientType=1 );"> <br>&nbsp; &nbsp; &nbsp;<span class="puso bs2" style="color:#fff; background:rgba(255,255,255,0.5);height:70px; border-radius:30px;cursor:pointer"><-></span></p>
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6ece2', endColorstr='#b6ece2', GradientType=1 );"> <br>&nbsp; &nbsp; &nbsp;<span class="puso bs2" style="color:#fff; background:rgba(255,255,255,0.5);height:70px; border-radius:30px;cursor:pointer"><a href="index.php" style="text-decoration:none;color:white;"><-></a></span></p>
     <br><br>
    <center>
    <iframe width="1126" height="468" src="../assets/1.mp4" frameborder="2" ></iframe>
    </center>
    <br><br>
    <div class="puso">
-       <h3 class="gp1"style='text-align:center;font-size:4rem'>Sungguh akunih orangnya tak jelas sekali sumpah bener bener gajelas, permikiran ku disebut gila, pandanganku berbeda dari yang lainya,tujuanku seperti tidak ada tujuan.</h3>
+       <h3 class="gp1"style='text-align:center;font-size:4rem'>Sungguh <span style="color:red">akunih orangnya tak jelas sekali</span> sumpah bener bener gajelas, permikiran ku disebut gila, pandanganku berbeda dari yang lainya,tujuanku seperti tidak ada tujuan.</h3>
    </div>
    <br>
    <br>
-   <center>
-   <button id="bebas" onclick="playVid()" type="button">Play </button>
-    <audio width="320" height="176">
+    <center>
+    <audio width="320" height="176" controls class='bs2' style="border-radius:50px;">
     <source src="../assets/1.mp3" type="audio/mp3">
 </audio>
    </center>
-   <script> 
-var vid = document.getElementById("bebas"); 
-
-function playVid() { 
-  vid.play(); 
-} 
-
-
-</script> 
+ <br><br><br><br>
 </body>
 </html>
