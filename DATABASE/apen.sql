@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Okt 2019 pada 12.13
+-- Waktu pembuatan: 07 Nov 2019 pada 02.46
 -- Versi server: 10.3.16-MariaDB
 -- Versi PHP: 7.1.30
 
@@ -36,25 +36,27 @@ CREATE TABLE `tbl_barang` (
   `jumlah` int(11) NOT NULL,
   `laba` int(11) NOT NULL,
   `total_laba` int(11) NOT NULL,
-  `kode_suply` varchar(10) NOT NULL
+  `kode_suply` varchar(10) NOT NULL,
+  `foto` varchar(100) NOT NULL,
+  `keterangan_foto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_barang`
 --
 
-INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `harga_barang`, `harga_jual`, `jumlah`, `laba`, `total_laba`, `kode_suply`) VALUES
-(23, 'benk benk', 1000, 2000, 159, 1000, 125000, 'xx1'),
-(24, 'Le Mineral ', 2500, 3000, 174, 500, 66500, 'xx2'),
-(25, 'Aqua', 2500, 3000, 270, 500, 136000, 'xx2'),
-(26, 'sukro', 800, 1000, 199, 200, 39800, 'xx1'),
-(27, 'nutrisari', 1000, 1500, 192, 500, 96000, 'xx1'),
-(28, 'C1000', 5000, 7000, 166, 2000, 338000, 'xx2'),
-(29, 'BeardBrand', 8500, 10000, 189, 1500, 283500, 'xx1'),
-(30, 'Adem Sari', 1500, 2000, 174, 500, 88500, 'xx2'),
-(31, 'Yakult', 1700, 2000, 186, 300, 55800, 'xx2'),
-(32, 'Yupi', 300, 500, 197, 200, 39800, 'xx2'),
-(33, 'Regal', 2000, 3000, 229, 1000, 234000, 'xx1');
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `harga_barang`, `harga_jual`, `jumlah`, `laba`, `total_laba`, `kode_suply`, `foto`, `keterangan_foto`) VALUES
+(23, 'benk benk', 1000, 2000, 159, 1000, 125000, 'xx1', '2017-bengbeng.png', 'Makanan ringan yg lumayan banyak dinikmati'),
+(24, 'Le Mineral ', 2500, 3000, 171, 500, 66500, 'xx2', '8665b05d3595372dacdb0b369cc5c84680dfc017-large.jpg', 'Minuman mineral yg biasa dibeli'),
+(25, 'Aqua', 2500, 3000, 240, 500, 136000, 'xx2', '2642564_8fff405b-851f-4196-b943-acae3d697e63_800_800.png', 'Aqua minuman mineral dari pegunungan'),
+(26, 'sukro', 800, 1000, 199, 200, 39800, 'xx1', '10026501_1.jpg', 'sukro sedaaap!!'),
+(27, 'nutrisari', 1000, 1500, 192, 500, 96000, 'xx1', 'img-75249-1318-nutrisari-lemon-tea-pls-18px40sx11g.jpg', 'nutrisari sasetan'),
+(28, 'C1000', 5000, 7000, 166, 2000, 338000, 'xx2', 'you-c_you-c-1000-minuman-stamina-lemon--botol--140-ml-_full02.jpg', 'miniman bervitamin c'),
+(29, 'BeardBrand', 8500, 10000, 189, 1500, 283500, 'xx1', 'nestle_nestle-bear-brand-minuman-susu--2-pcs-_full02.jpg', 'Minuman susah original'),
+(30, 'Adem Sari', 1500, 2000, 174, 500, 88500, 'xx2', '0_3a0a7223-6f9c-4a8c-9cf0-786efdc3a88d_600_670.png', 'adem sari obatnya panas dalam'),
+(31, 'Yakult', 1700, 2000, 186, 300, 55800, 'xx2', 'Danone-quiet-on-reports-of-Yakult-share-disposal-discussions_wrbm_large.png', 'sayangi usumu minum yakut setiap hari'),
+(32, 'Yupi', 300, 500, 197, 200, 39800, 'xx2', 'nHBfsgAAAgAAAAkAFQb6-gAId-Y.jpg.webp', 'permen kesukaan anak anak'),
+(33, 'Regal', 2000, 3000, 229, 1000, 234000, 'xx1', '6b28334982a5d40003b3dedb96b28935_tn.jpg', 'bisquit ini enak nih');
 
 -- --------------------------------------------------------
 
@@ -87,7 +89,9 @@ INSERT INTO `tbl_barangterjual` (`id_bt`, `nb_bt`, `hb_bt`, `hj_bt`, `jumlah_bt`
 (28, 'C1000', 5000, 7000, 3, 21000, 2000, 6000, 'xx2', '2019-10-30 18:12:08'),
 (30, 'Adem Sari', 1500, 2000, 3, 6000, 500, 1500, 'xx2', '2019-10-30 18:12:11'),
 (32, 'Yupi', 300, 500, 2, 1000, 200, 400, 'xx2', '2019-10-30 18:12:13'),
-(33, 'Regal', 2000, 3000, 5, 15000, 1000, 5000, 'xx1', '2019-10-30 18:12:19');
+(33, 'Regal', 2000, 3000, 5, 15000, 1000, 5000, 'xx1', '2019-10-30 18:12:19'),
+(24, 'Le Mineral ', 2500, 3000, 3, 9000, 500, 1500, 'xx2', '2019-11-04 08:27:36'),
+(25, 'Aqua', 2500, 3000, 30, 90000, 500, 15000, 'xx2', '2019-11-06 23:58:35');
 
 -- --------------------------------------------------------
 
@@ -132,12 +136,7 @@ CREATE TABLE `tbl_penjualan2` (
 --
 
 INSERT INTO `tbl_penjualan2` (`id_penjualan`, `nb_penjualan`, `hb_penjualan`, `hj_penjualan`, `jumlah_penjualan`, `subt_penjualan`, `l_penjualan`, `tl_penjualan`, `kds_penjualan`, `tgl_penjualan`) VALUES
-(24, 'Le Mineral ', 2500, 3000, 3, 9000, 500, 1500, 'xx2', '2019-10-30 18:12:04'),
-(25, 'Aqua', 2500, 3000, 2, 6000, 500, 1000, 'xx2', '2019-10-30 18:12:06'),
-(28, 'C1000', 5000, 7000, 3, 21000, 2000, 6000, 'xx2', '2019-10-30 18:12:08'),
-(30, 'Adem Sari', 1500, 2000, 3, 6000, 500, 1500, 'xx2', '2019-10-30 18:12:11'),
-(32, 'Yupi', 300, 500, 2, 1000, 200, 400, 'xx2', '2019-10-30 18:12:13'),
-(33, 'Regal', 2000, 3000, 5, 15000, 1000, 5000, 'xx1', '2019-10-30 18:12:19');
+(25, 'Aqua', 2500, 3000, 30, 90000, 500, 15000, 'xx2', '2019-11-06 23:58:35');
 
 -- --------------------------------------------------------
 
